@@ -16,7 +16,7 @@ router.get("/", async (req: Request, res: Response) => {
   res.send(items);
 });
 
-//TODO
+//DONE
 //Add an endpoint to GET a specific resource by Primary Key
 // create an entire new endpoint to get a specific record using its id field
 // use the sequelize interface to find that record
@@ -45,7 +45,7 @@ router.get("/:id", async (req: Request, res: Response) => {
 // update an existing record that is in the database with some kind of body
 // also use sequelize to help you accomplish this task
 router.patch("/:id", requireAuth, async (req: Request, res: Response) => {
-  //TODO try it yourself
+  //DONE try it yourself
   const { id } = req.params;
   if (!id) {
     return res.status(400).send(`id is required`);
